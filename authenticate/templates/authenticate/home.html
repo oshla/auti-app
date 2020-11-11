@@ -1,0 +1,21 @@
+<!doctype html>
+{% extends 'authenticate/base.html' %}
+<head>
+{% block content %}
+<h1> this is the home page </h1>
+
+
+{% if user.is_authenticated %}
+<img src="D:/user.jpg"></img>
+  <p><strong>Name: {{ user.first_name }} {{ user.last_name }} </strong></p>
+  <p><strong>Username: {{ user.username }}</strong></p>
+  <p><strong>E-mail: {{ user.email }}</strong></p>
+ 
+
+{% endif %}
+
+{% endblock %}
+</head>
+<body>
+</body>
+</html>
